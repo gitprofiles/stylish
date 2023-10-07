@@ -1,5 +1,5 @@
 import { twMerge } from "tailwind-merge";
-import { useMemo } from "preact/compat";
+import { useMemo } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { IconName, IconPrefix } from "@fortawesome/fontawesome-svg-core";
 

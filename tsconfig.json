@@ -4,7 +4,9 @@
     "types": ["bun-types"],
     "paths": {
       "~/*": ["src/*"],
-      "config": ["config.json"]
+      "config": ["config.json"],
+      "react": ["./node_modules/preact/compat/"],
+      "react-dom": ["./node_modules/preact/compat/"]
     },
     "jsx": "react-jsx",
     "jsxImportSource": "preact"
