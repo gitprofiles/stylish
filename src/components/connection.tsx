@@ -1,10 +1,10 @@
-import { Button } from "~/components/ui/button";
+import { Button, type ButtonProps } from "~/components/ui/button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { IconName, IconPrefix } from "@fortawesome/fontawesome-svg-core";
 
 interface GenericConnection {
   href: string;
-  variant?: string;
+  variant?: ButtonProps["variant"];
 }
 
 interface TextConnection extends GenericConnection {
@@ -39,7 +39,7 @@ export default function Connection({ connection }: Props) {
     >
       <Button variant={connection.variant || "ghost"} size="icon">
         <FontAwesomeIcon
-          classNameName="h-full p-2.5"
+          className="h-full p-2.5"
           icon={[
             (connection as IconConnection).icon.pack as IconPrefix,
             (connection as IconConnection).icon.name as IconName,
