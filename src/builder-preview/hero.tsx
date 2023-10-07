@@ -1,6 +1,6 @@
 import Intro from "~/components/intro";
 import Connection from "./connection";
-import type { ConnectionProps } from "~/components/connection";
+import type { ConnectionProps } from "../components/connection";
 
 export default function Hero({
   connections,

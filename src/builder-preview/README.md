@@ -10,4 +10,4 @@ When using the builder, it needs to show previews. The builder expects the below
 
 They must have the respective props as well. You can find these on offical templates such as gitprofiles/stylish on GitHub.
 
-Relative imports are not allowed either.
+Absolute imports should be for shadcn components, whilst any other internal components should be relative.
