@@ -18,11 +18,11 @@ interface IconConnection extends GenericConnection {
   };
 }
 
-interface Props {
+export interface ConnectionProps {
   connection: TextConnection | IconConnection;
 }
 
-export default function Connection({ connection }: Props) {
+export default function Connection({ connection }: ConnectionProps) {
   const type = "name" in connection ? "button" : "icon";
 
   return type === "button" ? (

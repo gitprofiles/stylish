@@ -2,6 +2,7 @@
 
 When using the builder, it needs to show previews. The builder expects the below.
 
+- hero.tsx
 - about-me.tsx
 - connection.tsx
 - detailed-project.tsx
