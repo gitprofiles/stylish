@@ -39,7 +39,7 @@ export default function Connection({ connection }: ConnectionProps) {
     >
       <Button variant={connection.variant || "ghost"} size="icon">
         <FontAwesomeIcon
-          className="h-6 w-6"
+          className="h-5 w-5"
           icon={[
             (connection as IconConnection).icon.pack as IconPrefix,
             (connection as IconConnection).icon.name as IconName,
