@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import type { IconName, IconPrefix } from "@fortawesome/fontawesome-svg-core";
 
 interface GenericConnection {
-  href: string;
+  href?: string;
   variant?: ButtonProps["variant"];
 }
 
