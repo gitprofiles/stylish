@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "types": ["bun-types"],
+    "paths": {
+      "~/*": ["src/*"],
+      "config": ["config.json"]
+    },
+    "jsx": "react-jsx",
+    "jsxImportSource": "preact"
+  },
+  "extends": "astro/tsconfigs/strict"
+}

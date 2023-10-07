@@ -1,0 +1,28 @@
+---
+import Layout from "../layouts/root.astro";
+import Main from "../layouts/main.astro";
+import Intro from "../components/intro.tsx";
+import WorkPlace from "../components/work-place.tsx";
+import config from "config";
+---
+
+<Layout title="Welcome to Astro.">
+  <Main>
+    <div class="flex-col flex gap-10">
+      <Intro title="Work" description="My experience in the industry." />
+
+      <div class="pt-4">
+        {
+          config.work.places.map((work, index) => (
+            <WorkPlace
+              active={index === 0}
+              {...work}
+              index={index}
+              total={config.work.places.length}
+            />
+          ))
+        }
+      </div>
+    </div>
+  </Main>
+</Layout>

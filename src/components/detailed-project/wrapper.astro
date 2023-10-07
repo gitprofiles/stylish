@@ -1,0 +1,14 @@
+---
+interface Props {
+  id: string;
+}
+const { id } = Astro.props;
+---
+
+<div
+  class="rounded-xl p-[2px] overflow-hidden bg-gradient-to-br from-primary-500 to-secondary-500"
+  transition:animate="initial"
+  transition:name={id}
+>
+  <slot />
+</div>

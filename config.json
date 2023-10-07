@@ -1,0 +1,84 @@
+{
+  "theme": {
+    "primary": "blue",
+    "secondary": "blue"
+  },
+  "user": {
+    "name": "John Doe",
+    "github": "johndoe",
+    "short_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec in ante vel leo pharetra feugiat.",
+    "description": "Donec gravida leo erat, a maximus sapien viverra a. Cras suscipit facilisis nunc sed lacinia. Nullam lorem justo, suscipit a lobortis quis, bibendum id tellus. Nulla in nunc tempus ex aliquet mollis nec non nibh. Nullam iaculis tortor vitae risus sagittis, eget mollis lacus vulputate. Nunc elit arcu, dignissim in dui eget, finibus aliquet lacus. Integer bibendum lacus nec consequat dictum.",
+    "connections": [
+      {
+        "href": "#",
+        "name": "Get in contact",
+        "color": "gradient"
+      },
+      {
+        "href": "https://x.com/x",
+        "icon": {
+          "pack": "fa-brands",
+          "name": "twitter"
+        }
+      }
+    ]
+  },
+  "work": {
+    "places": [
+      {
+        "role": "Phasellus vel",
+        "company": "Donec gravida",
+        "location": "Odio, aliquam",
+        "timePeriod": "Ligula - Sed",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras id justo vel nibh scelerisque ullamcorper a et ipsum. Integer mattis purus erat, ac sollicitudin ex sollicitudin non. Nunc auctor turpis a leo consequat maximus. Donec dapibus elementum elit id lobortis.\nProin ac vestibulum massa, eget semper nibh. Ut placerat erat in est ullamcorper luctus. Sed eu dui euismod, dapibus dui id, fermentum felis. Curabitur id metus lobortis, tincidunt erat quis, sodales nunc. Nam turpis mauris, lacinia faucibus neque sed."
+      },
+      {
+        "role": "Maximus sapien",
+        "company": "Cras suscipit",
+        "location": "Tortor, vitae",
+        "timePeriod": "Sit - Amet",
+        "description": " Integer vulputate ligula sed scelerisque cursus. Proin massa felis, mollis non placerat a, tristique sed quam. Integer hendrerit, ante ut malesuada sollicitudin, sem nisl semper neque, in mattis odio ligula quis elit. Ut venenatis nisl velit, ac sodales quam mollis eu.\nDuis ex massa, porta non ligula eget, laoreet vulputate nisi. Quisque fringilla blandit lectus, vestibulum iaculis justo dictum ut. Vivamus gravida viverra purus sit amet faucibus. Suspendisse iaculis ligula ut urna accumsan commodo. "
+      }
+    ]
+  },
+  "repos": [
+    {
+      "name": "lacinia",
+      "author": "johndoe",
+      "buttons": [
+        {
+          "href": "#",
+          "icon": {
+            "pack": "fa-brands",
+            "name": "github"
+          }
+        }
+      ]
+    },
+    {
+      "name": "vitae-risus",
+      "description": "Duis et tortor mi. Morbi congue sapien quis diam pulvinar tincidunt.",
+      "author": "johndoe",
+      "buttons": [
+        {
+          "name": "NPM",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "name": "hendrerit",
+      "author": "johndoe"
+    },
+    {
+      "name": "felis",
+      "description": "Duis et tortor mi. Morbi congue sapien quis diam pulvinar tincidunt.",
+      "author": "johndoe"
+    },
+    {
+      "name": "suspendisse",
+      "description": "Duis et tortor mi. Morbi congue sapien quis diam pulvinar tincidunt.",
+      "author": "johndoe"
+    }
+  ]
+}

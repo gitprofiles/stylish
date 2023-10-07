@@ -1,0 +1,132 @@
+---
+interface Props {
+  key?: string;
+}
+
+const { key = "nav-key" } = Astro.props;
+
+const location = Astro.url.pathname;
+
+const items = [
+  {
+    name: "Home",
+    href: "/",
+  },
+  {
+    name: "Work",
+    href: "/work/",
+  },
+  {
+    name: "Projects",
+    href: "/projects/",
+  },
+];
+
+type Item = (typeof items)[number];
+
+const isActive = (item: Item) => {
+  return item.href.replace(/\/$/, "") === location.replace(/\/$/, "");
+};
+
+const getClasses = (item: Item) => {
+  return isActive(item)
+    ? "dark:text-white text-black"
+    : "dark:text-white/50 text-black/50";
+};
+---
+
+<div
+  id="header-root"
+  class="left-0 w-full z-50 fixed rounded-full transition-all duration-500 ease-in-out"
+>
+  <div
+    id="header-wrapper"
+    class="p-[1px] max-w-6xl mx-auto transition-all duration-500 ease-in-out overflow-hidden"
+  >
+    <div
+      id="header"
+      class="flex-row text-base justify-center font-medium dark:text-white/50 text-black/50 items-center px-8 flex gap-7 border-b dark:border-b-neutral-800 h-11 duration-500 transition-all ease-in-out"
+    >
+      {
+        items.map((item) => (
+          <div class="relative h-full flex flex-col justify-center">
+            <a
+              href={item.href}
+              role="button"
+              aria-label={`Navigate to ${item.name}`}
+              class={`cursor-pointer z-20 relative ${getClasses(item)}`}
+              transition:animate="initial"
+              transition:name={`${key}-${item.href}`}
+            >
+              {item.name}
+            </a>
+            {isActive(item) && (
+              <div
+                transition:name={key}
+                transition:animate="initial"
+                class="h-[45px] left-[-50px] bottom-[-1px] w-[calc(100%+100px)] absolute pointer-events-none z-10 overflow-hidden"
+              >
+                <div class="bg-gradient-to-l dark:from-primary-600 dark:to-secondary-600 from-primary-400 to-secondary-400 blur-lg -bottom-5 absolute w-6 left-1/2 -translate-x-1/2 h-7" />
+              </div>
+            )}
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</div>
+
+<style>
+  .header-sticky {
+    @apply bg-white/80 rounded-[50px] h-12 border-b-0 dark:bg-black/70 !important;
+  }
+
+  .header-wrapper-sticky {
+    @apply bg-neutral-200/50 backdrop-blur rounded-[50px] z-50 relative dark:bg-neutral-700/40 !important;
+  }
+
+  .header-root-sticky {
+    @apply pt-5 rounded-full !important;
+  }
+
+  .header-root-sticky-delay {
+    --screen-width: min(100%, 1152px);
+    --width-offset: 2rem;
+    @apply w-[calc(var(--screen-width)-var(--width-offset))] ml-[calc((var(--screen-width)-var(--width-offset))/-2)] left-1/2 right-auto !important;
+  }
+</style>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const element = document.getElementById("header")!;
+    const elementWrapper = document.getElementById("header-wrapper")!;
+    const elementRoot = document.getElementById("header-root")!;
+
+    let headerRootStickyDelayTimeout: number | Timer | undefined = undefined;
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 0) {
+        elementRoot.classList.add("header-root-sticky-delay");
+        if (headerRootStickyDelayTimeout) {
+          clearTimeout(headerRootStickyDelayTimeout);
+        }
+
+        headerRootStickyDelayTimeout = setTimeout(() => {
+          element.classList.add("header-sticky");
+          elementWrapper.classList.add("header-wrapper-sticky");
+          elementRoot.classList.add("header-root-sticky");
+        }, 50);
+      } else {
+        elementRoot.style.left = "0px";
+        elementWrapper.classList.remove("header-wrapper-sticky");
+        element.classList.remove("header-sticky");
+        elementRoot.classList.remove("header-root-sticky");
+        elementRoot.classList.remove("header-root-sticky-delay");
+
+        if (headerRootStickyDelayTimeout) {
+          clearTimeout(headerRootStickyDelayTimeout);
+        }
+      }
+    });
+  });
+</script>
