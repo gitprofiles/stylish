@@ -9,7 +9,7 @@
       "react-dom": ["./node_modules/preact/compat/"]
     },
     "jsx": "react-jsx",
-    "jsxImportSource": "preact"
+    // "jsxImportSource": "preact"
   },
   "extends": "astro/tsconfigs/strict"
 }
