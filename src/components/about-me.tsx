@@ -1,10 +1,10 @@
 export default function AboutMe({ children }: { children: React.ReactNode }) {
   return (
-    <div class="flex justify-between h-full items-center lg:items-start gap-16 flex-col lg:flex-row">
-      <div class="space-y-4">
+    <div className="flex justify-between h-full items-center lg:items-start gap-16 flex-col lg:flex-row">
+      <div className="space-y-4">
         <h3>About me</h3>
 
-        <div class="text-lg dark:text-white text-justify space-y-6">
+        <div className="text-lg dark:text-white text-justify space-y-6">
           {children}
         </div>
       </div>
