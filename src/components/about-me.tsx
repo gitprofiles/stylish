@@ -29,7 +29,7 @@ export default function AboutMe(
             className={cn(
               "rounded-lg",
               image.object === "contain"
-                ? "m-auto max-w-full min-h-0"
+                ? "m-auto max-w-full min-h-0 lg:mt-10"
                 : "object-cover w-full h-full",
             )}
           />
