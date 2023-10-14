@@ -14,7 +14,7 @@ export default function AboutMe(
       {imageUrl && (
         <div className="flex-grow max-w-sm lg:w-[1200px]">
           <img
-            src="https://picsum.photos/600/600"
+            src={imageUrl}
             alt="Profile picture"
             className="rounded-lg object-cover w-full h-full"
           />
